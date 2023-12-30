@@ -39,20 +39,18 @@ const LoginPage = ({ setUserFunc }) => {
 
     const emailValue = event.target.email.value;
     const passwordValue = event.target.password.value;
-    console.log('email', emailValue);
-    console.log('pass', passwordValue);
+
     signInWithEmailAndPassword(auth, emailValue, passwordValue)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         // ...
-        console.log('user signed-in!', user);
         setUserFunc(user);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log('err', errorMessage);
+        console.log('err', errorCode, errorMessage);
       });
   };
 
