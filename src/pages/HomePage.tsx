@@ -11,7 +11,7 @@ const HomePage = ({ setUserFunc }) => {
       <Navbar setUserFunc={setUserFunc} />
       <Box m={2}>
         <HomepageActions />
-        <Typography component="h1" variant="h5" mb={3}>
+        {/* <Typography component="h1" variant="h5" mb={3}>
           Auditorías recientes:
         </Typography>
         {DUMMY_AUDITS.map((audit) => (
@@ -33,7 +33,7 @@ const HomePage = ({ setUserFunc }) => {
             </Typography>
             <hr />
           </div>
-        ))}
+        ))} */}
       </Box>
     </>
   );
