@@ -7,7 +7,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import NotFoundPage from './pages/NotFoundPage';
 import NewAuditForm from './components/NewAuditForm';
-import DistintivoHForm from './components/DistintivoHForm.tsx';
+// import DistintivoHForm from './components/DistintivoHForm.tsx';
+import AuditAccordion from './components/AccordionTest.tsx';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/new-audit/distintivo-h/12345',
-    element: <DistintivoHForm />,
+    element: <AuditAccordion />,
   },
 ]);
 

@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { DUMMY_AUDITS } from '../data/dummyData';
+import { DUMMY_AUDITS } from '../data/auditData';
 
 import Navbar from '../components/Navbar';
 import HomepageActions from '../components/HomepageActions';

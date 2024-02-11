@@ -28,7 +28,7 @@ export const DUMMY_AUDITS = [
 export const AUDIT_DISTINTIVO_H = [
   {
     id: 1,
-    category: '1. Recepción de Alimentos',
+    categoryName: '1. Recepción de Alimentos',
     criteriaItems: [
       {
         id: 1,
@@ -116,7 +116,7 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 2,
-    category: '2. Almacenamiento',
+    categoryName: '2. Almacenamiento',
     criteriaItems: [
       {
         id: 1,
@@ -197,7 +197,7 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 3,
-    category: '3. Manejo de Productos Químicos',
+    categoryName: '3. Manejo de Productos Químicos',
     criteriaItems: [
       { id: 1, criteriaItem: 'a) Área limpia, seca y en orden.', itemStatus: '', important: false },
       {
@@ -206,7 +206,13 @@ export const AUDIT_DISTINTIVO_H = [
         itemStatus: '',
         important: true,
       },
-      { id: 3, criteriaItem: 'Subquestion 2.2', itemStatus: '', important: false },
+      {
+        id: 3,
+        criteriaItem:
+          'c) Almacenamiento de productos de limpieza, desinfectantes y otros productos químicos en un lugar delimitado debidamente identificado y separado de cualquier área de manejo o almacenamiento de alimentos.',
+        itemStatus: '',
+        important: false,
+      },
       {
         id: 4,
         criteriaItem: null,
@@ -224,7 +230,7 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 4,
-    category: '4. Refrigeración',
+    categoryName: '4. Refrigeración',
     subCategories: [
       {
         subCategoryName: '4.1 Refrigeradores',
@@ -304,7 +310,7 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 5,
-    category: '5. Congelación',
+    categoryName: '5. Congelación',
     categoryQuestions: [
       { id: 1, question: 'Subquestion 2.1', answer: '' },
       { id: 2, question: 'Subquestion 2.2', answer: '' },
@@ -314,7 +320,7 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 6,
-    category: '6. Área de Cocina y Bar',
+    categoryName: '6. Área de Cocina y Bar',
     categoryQuestions: [
       { id: 1, question: 'Subquestion 2.1', answer: '' },
       { id: 2, question: 'Subquestion 2.2', answer: '' },
@@ -324,37 +330,209 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 7,
-    category: '7. Preparación de Alimentos',
-    categoryQuestions: [
-      { id: 1, question: 'Subquestion 2.1', answer: '' },
-      { id: 2, question: 'Subquestion 2.2', answer: '' },
-      // ... other subquestions
+    categoryName: '7. Preparación de Alimentos',
+    criteriaItems: [
+      {
+        id: 1,
+        criteriaItem:
+          'a) *Los alimentos de origen vegetal se lavan de forma individual o en manojos pequeños con agua potable, estropajo o cepillo (si es necesario), jabón o detergente, se enjuagan con agua potable y desinfectan.',
+        itemStatus: '',
+        important: true,
+      },
+      {
+        id: 2,
+        criteriaItem: 'b) *Se planea de antemano la descongelación de alimentos, por medio de: ',
+        subItems: [
+          '1. Refrigeración',
+          '2. Horno de microondas, siguiendo de inmediato la cocción del alimento.',
+          '3. Como parte del proceso de cocción.',
+        ],
+        criteriaItem2:
+          'En casos excepcionales se descongela a chorro de agua potable, a una temperatura máxima de 20°C evitando estancamientos.',
+        itemStatus: '',
+        important: true,
+      },
+      {
+        id: 3,
+        criteriaItem:
+          'c) *No se sirven pescados, mariscos ni carnes crudas. En el caso de los establecimientos en los que se sirven alimentos crudos, o a base de huevo crudo se especifica en la carta o menú que el platillo se sirve bajo consideración del comensal y el riesgo que esto implica.',
+        itemStatus: '',
+        important: true,
+      },
+      {
+        id: 4,
+        criteriaItem: 'd) *Temperaturas mínimas internas de cocción:',
+        subItems: [
+          '1. Cerdo y carne molida a 69°C por 15 segundos mínimo.',
+          '2. Aves, embutidos y carnes rellenas a 74°C por 15 segundos mínimo.',
+          '3. El resto de los alimentos arriba de 63°C por 15 segundos mínimo.',
+        ],
+        itemStatus: '',
+        important: true,
+      },
+      {
+        id: 5,
+        criteriaItem:
+          'e) *Los alimentos son recalentados rápidamente a una temperatura interna mínima de 74°C por 15 segundos mínimo.',
+        itemStatus: '',
+        important: true,
+      },
+      {
+        id: 6,
+        criteriaItem:
+          'f) *Los alimentos preparados que no se van a servir de inmediato se someten a un proceso de enfriamiento rápido, máximo 4 horas.',
+        itemStatus: '',
+        important: true,
+      },
+      {
+        id: 7,
+        criteriaItem: 'g) Los alimentos descongelados no se vuelven a congelar.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 8,
+        criteriaItem:
+          'h) Se usan utensilios que minimizan el contacto directo de las manos con el alimento, tales como cucharones, pinzas, tenedores, etc.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 9,
+        criteriaItem:
+          'i) El personal se lava las manos antes de manipular alimentos, vajilla limpia y después de cualquier situación que implique contaminación.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 10,
+        criteriaItem:
+          'j) En caso de usar guantes, se exige el lavado de manos antes de colocárselos. Estos son desechables y se cambian después de cada interrupción.',
+        itemStatus: '',
+        important: false,
+      },
     ],
     observations: '',
   },
   {
     id: 8,
-    category: '8. Área de Servicio',
-    categoryQuestions: [
-      { id: 1, question: 'Subquestion 2.1', answer: '' },
-      { id: 2, question: 'Subquestion 2.2', answer: '' },
-      // ... other subquestions
+    categoryName: '8. Área de Servicio',
+    criteriaItems: [
+      {
+        id: 1,
+        criteriaItem: 'a) *Alimentos fríos listos para servirse y buffet a una temperatura máxima de 7°C.',
+        itemStatus: '',
+        important: true,
+      },
+      {
+        id: 2,
+        criteriaItem: 'b) *Alimentos calientes listos para servirse y buffet a una temperatura mínima de 60°C.',
+        itemStatus: '',
+        important: true,
+      },
+      {
+        id: 3,
+        criteriaItem:
+          'c) Los alimentos preparados y listos para servirse están cubiertos antes de iniciar el servicio.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 4,
+        criteriaItem:
+          'd) Los utensilios de servicio no se tocan por la parte que entra en contacto con los alimentos o con la boca del comensal.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 5,
+        criteriaItem:
+          'e) Los alimentos envasados en porción individual cumplen con las instrucciones del fabricante para su conservación y una vez utilizadas se desechan.',
+        itemStatus: '',
+        important: false,
+      },
+      { id: 6, criteriaItem: 'f) Manteles y servilletas limpios.', itemStatus: '', important: false },
+      {
+        id: 7,
+        criteriaItem: 'g) Área y estaciones de servicio limpias y funcionando.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 8,
+        criteriaItem: 'h) El área del vehículo que esté en contacto con los alimentos está limpia.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 9,
+        criteriaItem:
+          'i) Los alimentos listos para servirse, se transportan en recipientes cerrados o envases desechables.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 10,
+        criteriaItem:
+          'j) Los alimentos preparados que se transportan, no se exponen a la zona de peligro de temperaturas por más de dos horas.',
+        itemStatus: '',
+        important: false,
+      },
     ],
     observations: '',
   },
   {
     id: 9,
-    category: '9. Agua y Hielo',
-    categoryQuestions: [
-      { id: 1, question: 'Subquestion 2.1', answer: '' },
-      { id: 2, question: 'Subquestion 2.2', answer: '' },
-      // ... other subquestions
+    categoryName: '9. Agua y Hielo',
+    criteriaItems: [
+      {
+        id: 1,
+        criteriaItem:
+          'a) *Agua potable con un rango de 0.2 a 1.5mg/L (ppm) de cloro residual o análisis microbiológico por lo menos una vez al mes.',
+        itemStatus: '',
+        important: true,
+      },
+      { id: 2, criteriaItem: 'b) Registros de potabilidad del agua.', itemStatus: '', important: false },
+      {
+        id: 3,
+        criteriaItem: 'c) Hielo para consumo humano elaborado con agua purificada y/o potable.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 4,
+        criteriaItem:
+          'd) Se cuenta con registros de mantenimiento de equipo de potabilización y/o purificación de agua y máquina de hielo.',
+        itemStatus: '',
+        important: false,
+      },
+      { id: 5, criteriaItem: 'e) El depósito de hielo está limpio.', itemStatus: '', important: false },
+      {
+        id: 6,
+        criteriaItem: 'f) Utensilios exclusivos como cucharón y/o pinzas para hielo, limpios y desinfectados.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 7,
+        criteriaItem:
+          'g) El hielo para consumo humano no se utiliza para otros fines, como es el enfriamiento de bebidas.',
+        itemStatus: '',
+        important: false,
+      },
+      {
+        id: 8,
+        criteriaItem:
+          'h) Las cisternas o tinacos para almacenamiento de agua cumplen con las características descritas en los numerales 5.1.11 y 5.1.12.',
+        itemStatus: '',
+        important: false,
+      },
     ],
     observations: '',
   },
   {
     id: 10,
-    category: '10. Servicios Sanitarios para Empleados',
+    categoryName: '10. Servicios Sanitarios para Empleados',
     criteriaItems: [
       { id: 1, criteriaItem: 'a) Área limpia.', itemStatus: '', important: false },
       {
@@ -373,8 +551,8 @@ export const AUDIT_DISTINTIVO_H = [
         important: false,
       },
       {
-        id: 2,
-        criteriaItem: 'c) El WC cuent con:',
+        id: 3,
+        criteriaItem: 'c) El WC cuenta con:',
         subItems: [
           'Agua corriente.',
           'Papel sanitario.',
@@ -384,7 +562,7 @@ export const AUDIT_DISTINTIVO_H = [
         important: false,
       },
       {
-        id: 2,
+        id: 4,
         criteriaItem: 'd) Cuenta con casilleros o un área específica para colocar objetos personales.',
         itemStatus: '',
         important: false,
@@ -394,7 +572,7 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 11,
-    category: '11. Manejo de la basura',
+    categoryName: '11. Manejo de la basura',
     criteriaItems: [
       {
         id: 1,
@@ -422,7 +600,7 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 12,
-    category: '12. Control de Plagas',
+    categoryName: '12. Control de Plagas',
     criteriaItems: [
       { id: 1, criteriaItem: 'a) *Ausencia de plagas.', itemStatus: '', important: true },
       {
@@ -450,7 +628,7 @@ export const AUDIT_DISTINTIVO_H = [
   },
   {
     id: 13,
-    category: '13. Personal',
+    categoryName: '13. Personal',
     criteriaItems: [
       { id: 1, criteriaItem: 'a) Apariencia pulcra.', itemStatus: '', important: false },
       { id: 2, criteriaItem: 'b) Uniforme limpio y completo.', itemStatus: '', important: false },
