@@ -14,6 +14,7 @@ const DistintivoHForm = () => {
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
+      console.log('event', event);
     };
   return (
     <Box
